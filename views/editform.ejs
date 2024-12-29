@@ -1,0 +1,44 @@
+<!-- views/edit-todo.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Todo</title>
+    <link rel="stylesheet" href="/editform.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="edit-container">
+            <div class="edit-header">
+                <a href="/" class="back-link">
+                    <i class="fas fa-arrow-left"></i> Back to Todos
+                </a>
+                <h1>Edit Task</h1>
+            </div>
+
+            <form action="/edit/<%= todo._id %>?_method=PATCH" method="POST" class="edit-form">
+                <div class="form-group">
+                    <label for="todoText">Task Description</label>
+                    <input 
+                        type="text" 
+                        id="todoText" 
+                        name="text" 
+                        value="<%= todo.text %>" 
+                        required
+                        autofocus
+                    >
+                </div>
+
+                <div class="form-buttons">
+                    <a href="/" class="cancel-button">Cancel</a>
+                    <button type="submit" class="save-button">
+                        <i class="fas fa-save"></i> Save Changes
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

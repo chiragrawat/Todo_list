@@ -1,0 +1,132 @@
+/* Add these styles to your home.css */
+
+.edit-container {
+    max-width: 600px;
+    margin: 2rem auto;
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.edit-header {
+    margin-bottom: 2rem;
+}
+
+.edit-header h1 {
+    margin: 1rem 0;
+    color: #2d3748;
+    font-size: 1.8rem;
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    color: #4a5568;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.back-link i {
+    margin-right: 0.5rem;
+}
+
+.back-link:hover {
+    color: #2d3748;
+}
+
+.edit-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    color: #4a5568;
+    font-weight: 500;
+}
+
+.form-group input {
+    padding: 0.75rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #4299e1;
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.1);
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.cancel-button {
+    padding: 0.75rem 1.5rem;
+    background: #e2e8f0;
+    color: #4a5568;
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.cancel-button:hover {
+    background: #cbd5e0;
+}
+
+.save-button {
+    padding: 0.75rem 1.5rem;
+    background: #4299e1;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.875rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.save-button:hover {
+    background: #3182ce;
+}
+
+.save-button i {
+    font-size: 1rem;
+}
+
+/* Responsive styles */
+@media (max-width: 640px) {
+    .edit-container {
+        margin: 1rem;
+        padding: 1.5rem;
+    }
+
+    .form-buttons {
+        flex-direction: column-reverse;
+    }
+
+    .save-button, .cancel-button {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+}
